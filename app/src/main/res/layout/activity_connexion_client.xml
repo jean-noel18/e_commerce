@@ -37,19 +37,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gestionnaire"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:id="@+id/bouttonGestionnaire"
+            android:onClick=""/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Commercant"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:id="@+id/bouttonCommercant"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Client"
-            android:backgroundTint="@color/black"/>
+            android:backgroundTint="@color/black"
+            android:id="@+id/bouttonClient"/>
 
     </LinearLayout>
 
