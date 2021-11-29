@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConnexionActivity">
+    tools:context=".ConnexionGestionnaireActivity">
 
 
     <LinearLayout
@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/abc_vector_test"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/abc_vector_test"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -37,7 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gestionnaire"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/black"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Client"
-            android:backgroundTint="@color/black"/>
+            />
 
     </LinearLayout>
 
@@ -111,13 +112,7 @@
         android:layout_height="match_parent"
         android:gravity="right">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="S'inscrire"
-            android:textColor="@color/black"
-            android:background="?android:attr/selectableItemBackground"
-            />
+
     </LinearLayout>
 
 

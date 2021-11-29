@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void pageConnexion(){
 
-        Intent intent = new Intent(this, ConnexionActivity.class);
+        Intent intent = new Intent(this, ConnexionClientActivity.class);
 
         /*EditText champDomaine = (EditText) findViewById(R.id.editTextDomaineCompetence);
         String valeurDomaine = champDomaine.getText().toString();

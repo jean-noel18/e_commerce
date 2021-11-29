@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class ConnexionActivity extends AppCompatActivity {
+public class ConnexionClientActivity extends AppCompatActivity {
 
 
     EditText champPseudo;
@@ -21,7 +19,7 @@ public class ConnexionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connexion);
+        setContentView(R.layout.activity_connexion_client);
 
         champPseudo = findViewById(R.id.editTextPseudo);
         champMdp = findViewById(R.id.editTextMotDePasse);
@@ -34,10 +32,10 @@ public class ConnexionActivity extends AppCompatActivity {
                 if(champPseudo.getText().toString().equals("admin") &&
                         champPseudo.getText().toString().equals("admin")){
 
-                    Intent intent = new Intent(ConnexionActivity.this,GestionnaireActivity.class);
+                    Intent intent = new Intent(ConnexionClientActivity.this,GestionnaireActivity.class);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(ConnexionActivity.this, "Pseudo ou mot de passe incorrect.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ConnexionClientActivity.this, "Pseudo ou mot de passe incorrect.", Toast.LENGTH_LONG).show();
 
                 }
 

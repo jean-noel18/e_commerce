@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_e_commerce">
         <activity
+            android:name=".ConnexionGestionnaireActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ConnexionCommercantActivity"
+            android:exported="true" />
+        <activity
             android:name=".SupprimerCommercantActivity"
             android:exported="true" />
         <activity
@@ -22,7 +28,7 @@
             android:name=".GestionnaireActivity"
             android:exported="true" />
         <activity
-            android:name=".ConnexionActivity"
+            android:name=".ConnexionClientActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
