@@ -47,4 +47,8 @@ public class ConnexionCommercantActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ConnexionGestionnaireActivity.class);
         startActivity(intent);
     }
+    public void retourAccueil(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

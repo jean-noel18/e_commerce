@@ -27,4 +27,8 @@ public class ConnexionClientActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ConnexionCommercantActivity.class);
         startActivity(intent);
     }
+    public void retourAccueil(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
