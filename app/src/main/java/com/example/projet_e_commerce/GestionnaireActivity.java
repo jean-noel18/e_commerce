@@ -9,41 +9,35 @@ import android.widget.Button;
 
 public class GestionnaireActivity extends AppCompatActivity {
 
-    Button boutonAjouterCommercant;
-    Button boutonSupprCommercant;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestionnaire);
 
-        boutonAjouterCommercant = findViewById(R.id.buttonAjouterCommercant);
-        boutonSupprCommercant = findViewById(R.id.buttonSupprimerCommercant);
-
-        boutonAjouterCommercant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pageAjouterCommercant();
-
-            }
-        });
 
 
-        boutonSupprCommercant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pageSupprimerCommercant();
-            }
-        });
+
+
+
+
     }
 
-    public void pageAjouterCommercant(){
+    public void pageAjouterCommercant(View v){
         Intent intent = new Intent(GestionnaireActivity.this,AjouterCommercantActivity.class);
         startActivity(intent);
     }
 
-    public void pageSupprimerCommercant(){
+    public void pageSupprimerCommercant(View v){
         Intent intent = new Intent(GestionnaireActivity.this,SupprimerCommercantActivity.class);
         startActivity(intent);
     }
+
+    public void retourConnexion(View v){
+        Intent intent = new Intent(this, ConnexionGestionnaireActivity.class);
+        startActivity(intent);
+    }
+
+
 }

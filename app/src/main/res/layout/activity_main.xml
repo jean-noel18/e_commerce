@@ -36,16 +36,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Accéder au menu"/>
+            android:text="Accéder au menu"
+            android:id="@+id/buttonMenu"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Se connecter"
-            android:onClick="connexion"
             android:textColor="@color/white"
-            android:background="?android:attr/selectableItemBackground"/>
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/butonConnexion"
+            />
 
     </LinearLayout>
 

@@ -32,7 +32,11 @@ public class AjouterCommercantActivity extends AppCompatActivity {
         boutonAjout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(champNouveauMdp.getText().toString().equals(champNouveauMdpDeuxiemeSaisie.getText().toString())){
+
+                if(champNouveauMdp.getText().toString().equals("")){
+                    Toast.makeText(AjouterCommercantActivity.this, "Remplissez tous les champs", Toast.LENGTH_LONG).show();
+
+                }else if(champNouveauMdp.getText().toString().equals(champNouveauMdpDeuxiemeSaisie.getText().toString())){
 
                     AlertDialog.Builder fenetreDeDialogue = new AlertDialog.Builder(AjouterCommercantActivity.this);
                     fenetreDeDialogue.setTitle("Validation");
@@ -61,5 +65,10 @@ public class AjouterCommercantActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void retourAjoutSuppr(View view) {
+        Intent intent = new Intent(this, GestionnaireActivity.class);
+        startActivity(intent);
     }
 }

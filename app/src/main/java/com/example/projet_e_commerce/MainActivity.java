@@ -9,16 +9,24 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Button boutonSeConnecter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        boutonSeConnecter = findViewById(R.id.butonConnexion);
+        boutonSeConnecter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                connexion();
+            }
+        });
+
 
     }
-    public void connexion(View v){
+    public void connexion(){
         Intent intent = new Intent(this,ConnexionClientActivity.class);
         startActivity(intent);
     }

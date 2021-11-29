@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jean-/AndroidStudioProjects/e_commerce/app/src/main/res/layout/activity_ajouter_commercant.xml" value="0.264" />
+        <entry key="..\:/Users/jean-/AndroidStudioProjects/e_commerce/app/src/main/res/layout/activity_connexion_client.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jean-/AndroidStudioProjects/e_commerce/app/src/main/res/layout/activity_connexion_gestionnaire.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jean-/AndroidStudioProjects/e_commerce/app/src/main/res/layout/activity_gestionnaire.xml" value="0.264" />
+        <entry key="..\:/Users/jean-/AndroidStudioProjects/e_commerce/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/jean-/AndroidStudioProjects/e_commerce/app/src/main/res/layout/activity_supprimer_commercant.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_ajouter_commercant.xml" value="0.16983695652173914" />
         <entry key="app/src/main/res/layout/activity_connexion.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_connexion_client.xml" value="0.29483695652173914" />

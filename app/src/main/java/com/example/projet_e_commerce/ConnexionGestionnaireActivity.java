@@ -26,4 +26,9 @@ public class ConnexionGestionnaireActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void menuGestionnaire(View view) {
+        Intent intent = new Intent(this, GestionnaireActivity.class);
+        startActivity(intent);
+    }
 }
