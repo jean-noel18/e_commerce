@@ -20,29 +20,15 @@ public class ConnexionClientActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion_client);
+    }
 
-        champPseudo = findViewById(R.id.editTextPseudo);
-        champMdp = findViewById(R.id.editTextMotDePasse);
-        seConnecter = findViewById(R.id.buttonSeConnecter);
+    public void connexionGestionnaire(){
+        Intent intent = new Intent(this,ConnexionGestionnaireActivity.class);
+        startActivity(intent);
+    }
 
-        seConnecter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(champPseudo.getText().toString().equals("admin") &&
-                        champPseudo.getText().toString().equals("admin")){
-
-                    Intent intent = new Intent(ConnexionClientActivity.this,GestionnaireActivity.class);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(ConnexionClientActivity.this, "Pseudo ou mot de passe incorrect.", Toast.LENGTH_LONG).show();
-
-                }
-
-
-            }
-        });
-
-
+    public void connexionCommercant(){
+        Intent intent = new Intent(this, ConnexionCommercantActivity.class);
+        startActivity(intent);
     }
 }
