@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    public void connexion(){
+        Intent intent = new Intent(this,ConnexionClientActivity.class);
+        startActivity(intent);
+    }
 
 
 }

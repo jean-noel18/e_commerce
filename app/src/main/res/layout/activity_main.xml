@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Se connecter"
-
+            android:onClick="connexion"
             android:textColor="@color/white"
             android:background="?android:attr/selectableItemBackground"/>
 
