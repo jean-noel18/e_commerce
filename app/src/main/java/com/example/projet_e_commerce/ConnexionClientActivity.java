@@ -18,12 +18,12 @@ public class ConnexionClientActivity extends AppCompatActivity {
         setContentView(R.layout.activity_connexion_client);
     }
 
-    public void connexionGestionnaire(){
+    public void connexionGestionnaire(View v){
         Intent intent = new Intent(this,ConnexionGestionnaireActivity.class);
         startActivity(intent);
     }
 
-    public void connexionCommercant(){
+    public void connexionCommercant(View v){
         Intent intent = new Intent(this, ConnexionCommercantActivity.class);
         startActivity(intent);
     }

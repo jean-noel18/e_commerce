@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void connexion(){
+    public void connexion(View v){
         Intent intent = new Intent(this,ConnexionClientActivity.class);
         startActivity(intent);
     }
