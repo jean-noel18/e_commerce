@@ -12,10 +12,6 @@ import android.widget.Toast;
 public class ConnexionClientActivity extends AppCompatActivity {
 
 
-    EditText champPseudo;
-    EditText champMdp;
-    Button seConnecter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

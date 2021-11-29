@@ -46,13 +46,15 @@
             android:layout_height="wrap_content"
             android:text="Commercant"
             android:layout_marginRight="10dp"
-            android:id="@+id/bouttonCommercant"/>
+            android:id="@+id/bouttonCommercant"
+            android:onClick="connexionCommercant"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Client"
             android:id="@+id/bouttonClient"
+            android:onClick="connexionClien"
             />
 
     </LinearLayout>
