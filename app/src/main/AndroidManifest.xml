@@ -21,9 +21,7 @@
         <activity
             android:name=".AjouterCommercantActivity"
             android:exported="true" />
-        <activity
-            android:name=".AjouterCommercant"
-            android:exported="true" />
+
         <activity
             android:name=".GestionnaireActivity"
             android:exported="true" />

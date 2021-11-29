@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/acceuil">
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity" android:orientation="vertical" android:gravity="center">
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gestionnaire" android:id="@+id/buttonGestionnaire"/>
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Commercant" android:id="@+id/buttonCommercant"/>
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Client" android:id="@+id/buttonClient"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Commerce time'Z"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="L'appli marchand de tous les temps !"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Accéder au menu"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Se connecter"
+
+            android:textColor="@color/white"
+            android:background="?android:attr/selectableItemBackground"/>
+
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
