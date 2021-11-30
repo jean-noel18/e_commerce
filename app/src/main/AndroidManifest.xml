@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_e_commerce">
         <activity
+            android:name=".Acceuil"
+            android:exported="true" />
+        <activity
+            android:name=".InscriptionClient"
+            android:exported="true" />
+        <activity
             android:name=".ConnexionGestionnaireActivity"
             android:exported="true" />
         <activity
@@ -21,7 +27,6 @@
         <activity
             android:name=".AjouterCommercantActivity"
             android:exported="true" />
-
         <activity
             android:name=".GestionnaireActivity"
             android:exported="true" />

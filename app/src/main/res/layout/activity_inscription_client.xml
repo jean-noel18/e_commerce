@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InscriptionClient"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/abc_vector_test"
+            android:onClick="retourConnexion"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Gestionnaire"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ajouter un commercant chez Commerce time'Z"
+        />
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AjouterCommercantActivity"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prenom :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextAjoutPseudo"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pseudo :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mot de passe :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextAjoutNouveauMdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmation mot de passe :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextAjoutDeuxiemeSaisieMdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adresse :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Centre d'interêt :"/>
+
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter"
+            android:id="@+id/buttonAjouterCommercant"/>
+
+    </LinearLayout>
+
+</LinearLayout>
