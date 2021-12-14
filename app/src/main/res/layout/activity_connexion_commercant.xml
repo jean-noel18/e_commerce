@@ -106,7 +106,8 @@
             android:id="@+id/buttonSeConnecter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Se connecter" />
+            android:text="Se connecter"
+            android:onClick="pageCommercant"/>
 
     </LinearLayout>
 

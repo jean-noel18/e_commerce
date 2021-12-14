@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_e_commerce">
         <activity
+            android:name=".ListeCommandeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AjoutProduitActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ListeProduitsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CommercantActivity"
+            android:exported="true" />
+        <activity
             android:name=".Acceuil"
             android:exported="true" />
         <activity
