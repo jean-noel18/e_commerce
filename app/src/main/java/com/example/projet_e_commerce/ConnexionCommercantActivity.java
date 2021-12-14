@@ -28,4 +28,16 @@ public class ConnexionCommercantActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void pageConnexionGestionnaire(View v){
+        Intent intent = new Intent(this, ConnexionGestionnaireActivity.class);
+        startActivity(intent);
+    }
+
+    public void pageConnexionClient(View v){
+        Intent intent = new Intent(this, ConnexionClientActivity.class);
+        startActivity(intent);
+    }
+
+
 }

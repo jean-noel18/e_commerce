@@ -31,14 +31,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="30dp">
+        >
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gestionnaire"
             android:layout_marginRight="10dp"
-            android:id="@+id/bouttonGestionnaire"/>
+            android:onClick="pageConnexionGestionnaire"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Client"
-            android:id="@+id/bouttonClient"
+            android:onClick="pageConnexionClient"
             />
 
     </LinearLayout>
@@ -60,7 +60,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="558dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -111,12 +111,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="right">
 
-
-    </LinearLayout>
 
 </LinearLayout>
