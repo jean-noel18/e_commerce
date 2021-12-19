@@ -31,4 +31,9 @@ public class ConnexionClientActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void inscription(View v){
+        Intent intent = new Intent(this, InscriptionClient.class);
+        startActivity(intent);
+    }
 }

@@ -123,6 +123,7 @@
             android:text="S'inscrire"
             android:textColor="@color/black"
             android:background="?android:attr/selectableItemBackground"
+            android:onClick="inscription"
             />
     </LinearLayout>
 

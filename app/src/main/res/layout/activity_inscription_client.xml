@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Gestionnaire"
+            android:text="Client"
             android:gravity="center"/>
 
     </LinearLayout>
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Ajouter un commercant chez Commerce time'Z"
+        android:text="S'inscrire chez Commerce time'Z"
         />
 
 
@@ -146,7 +146,7 @@
 
         <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ajouter"
+            android:text="S'inscrire"
             android:id="@+id/buttonAjouterCommercant"/>
 
     </LinearLayout>
