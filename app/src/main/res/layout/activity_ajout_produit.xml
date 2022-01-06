@@ -50,6 +50,7 @@
 
             <EditText android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/champCategorieProduit"
                 />
 
         </LinearLayout>
@@ -65,7 +66,8 @@
 
             <EditText android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editTextAjoutPseudo"/>
+                android:id="@+id/champNomProduit"
+                />
 
         </LinearLayout>
 
@@ -80,6 +82,8 @@
 
             <EditText android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/champPrixProduit"
+
                 />
 
         </LinearLayout>
@@ -95,7 +99,8 @@
 
             <EditText android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editTextAjoutNouveauMdp"/>
+                android:id="@+id/champDescriptionProduit"
+                />
 
         </LinearLayout>
 
@@ -110,7 +115,9 @@
 
             <EditText android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editTextAjoutDeuxiemeSaisieMdp"/>
+                android:id="@+id/champPromoProduit"
+
+                />
 
         </LinearLayout>
 

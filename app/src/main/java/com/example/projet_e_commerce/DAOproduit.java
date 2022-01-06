@@ -4,21 +4,21 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class DAOcommercant {
+public class DAOproduit {
 
     private DatabaseReference databaseReference;
 
-    public DAOcommercant(){
+    public DAOproduit(){
 
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        databaseReference = db.getReference(Commercant.class.getSimpleName());
-        
+        databaseReference = db.getReference(Produit.class.getSimpleName());
+
     }
 
-    public Task<Void> add(Commercant c){
+    public Task<Void> add(Produit p){
 
 
-        return databaseReference.push().setValue(c);
+        return databaseReference.push().setValue(p);
     }
 
     public Task<Void> remove(String key){
@@ -27,3 +27,4 @@ public class DAOcommercant {
         return databaseReference.child(key).removeValue();    }
 
 }
+
