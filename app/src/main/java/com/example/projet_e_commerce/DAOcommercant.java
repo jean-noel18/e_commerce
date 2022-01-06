@@ -12,7 +12,7 @@ public class DAOcommercant {
 
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference(Commercant.class.getSimpleName());
-        
+
     }
 
     public Task<Void> add(Commercant c){
