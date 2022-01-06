@@ -18,17 +18,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Acceuil extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE_CATEGORIE= "com.example.myapplication.MESSAGE_CATEGORIE";
-    public static final String EXTRA_MESSAGE_DESCRIPTION= "com.example.myapplication.MESSAGE_DESCRIPTION";
-    public static final String EXTRA_MESSAGE_NOM= "com.example.myapplication.MESSAGE_NOM";
-    public static final String EXTRA_MESSAGE_PRIX= "com.example.myapplication.MESSAGE_PRIX";
-    public static final String EXTRA_MESSAGE_PROMO= "com.example.myapplication.MESSAGE_PROMO";
+    public static final String EXTRA_MESSAGE_CATEGORIE= "com.example.projet_e_commerce.MESSAGE_CATEGORIE";
+    public static final String EXTRA_MESSAGE_DESCRIPTION= "com.example.projet_e_commerce.MESSAGE_DESCRIPTION";
+    public static final String EXTRA_MESSAGE_NOM= "com.example.projet_e_commerce.MESSAGE_NOM";
+    public static final String EXTRA_MESSAGE_PRIX= "com.example.projet_e_commerce.MESSAGE_PRIX";
+    public static final String EXTRA_MESSAGE_PROMO= "com.example.projet_e_commerce.MESSAGE_PROMO";
 
-    String categorie;
-    String description;
-    String nom;
-    String prix ;
-    String promo;
+
 
 
     @Override
@@ -49,12 +45,18 @@ public class Acceuil extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         for (DataSnapshot appleSnapshot: dataSnapshot.getChildren()) {
-                             categorie = appleSnapshot.child("categorie").getValue().toString();
-                             description = appleSnapshot.child("description").getValue().toString();
-                             nom = appleSnapshot.child("nom").getValue().toString();
-                             prix = appleSnapshot.child("prix").getValue().toString();
-                             promo = appleSnapshot.child("promo").getValue().toString();
+                           String  categorie = appleSnapshot.child("categorie").getValue().toString();
+                            String description = appleSnapshot.child("description").getValue().toString();
+                            String nom = appleSnapshot.child("nom").getValue().toString();
+                            String prix = appleSnapshot.child("prix").getValue().toString();
+                            String promo = appleSnapshot.child("promo").getValue().toString();
                             System.out.println(categorie);
+                            System.out.println(description);
+                            System.out.println(nom);
+                            System.out.println(prix);
+                            System.out.println(promo);
+                            pageRecherche(categorie,description,nom,prix,promo);
+
                         }
                     }
 
@@ -65,7 +67,6 @@ public class Acceuil extends AppCompatActivity {
 
 
                 });
-                pageRecherche();
             }
         });
 
@@ -77,7 +78,7 @@ public class Acceuil extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void pageRecherche(){
+    public void pageRecherche(String categorie, String description, String nom, String prix, String promo){
 
         Intent intent = new Intent(this, RechercheActivity.class);
 
