@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_e_commerce">
         <activity
+            android:name=".RechercheActivity"
+            android:exported="true" />
+        <activity
             android:name=".ListeCommandeActivity"
             android:exported="true" />
         <activity
