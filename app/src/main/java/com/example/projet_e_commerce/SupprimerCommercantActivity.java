@@ -49,6 +49,9 @@ public class SupprimerCommercantActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     for (DataSnapshot appleSnapshot: dataSnapshot.getChildren()) {
                         appleSnapshot.getRef().removeValue();
+                        Toast.makeText(getApplicationContext(), "Commercant supprimé", Toast.LENGTH_LONG).show();
+
+                        retourMenuGestionnaire(v);
                     }
                 }
 

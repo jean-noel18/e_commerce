@@ -36,6 +36,7 @@ public class AjoutProduitActivity extends AppCompatActivity {
 
             dao.add(p).addOnSuccessListener(suc -> {
                 Toast.makeText(this, "Nouveau produit ajouté", Toast.LENGTH_SHORT).show();
+                retourListeProduit(v);
             }).addOnFailureListener(er -> {
                 Toast.makeText(this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
             });

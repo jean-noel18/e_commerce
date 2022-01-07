@@ -77,7 +77,7 @@
                 android:text="Pseudo :" />
 
             <EditText
-                android:id="@+id/editTextPseudo"
+                android:id="@+id/editTextPseudoCommercant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -96,14 +96,14 @@
                 android:text="Mot de passe :" />
 
             <EditText
-                android:id="@+id/editTextMotDePasse"
+                android:id="@+id/editTextMotDePasseCommercant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/buttonSeConnecter"
+            android:id="@+id/buttonSeConnecterCommercant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Se connecter"

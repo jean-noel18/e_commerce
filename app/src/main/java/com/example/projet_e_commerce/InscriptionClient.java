@@ -37,6 +37,7 @@ public class InscriptionClient extends AppCompatActivity {
 
             dao.add(c).addOnSuccessListener(suc->{
                 Toast.makeText(this, "Inscription validée", Toast.LENGTH_SHORT).show();
+                retourConnexion(v);
             }).addOnFailureListener(er->{
                 Toast.makeText(this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
             });

@@ -40,9 +40,10 @@ public class AjouterCommercantActivity extends AppCompatActivity {
 
 
             dao.add(c).addOnSuccessListener(suc -> {
-                Toast.makeText(this, "Nouveau commercant ajouté", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Nouveau commercant ajouté", Toast.LENGTH_LONG).show();
+                retourAjoutSuppr(v);
             }).addOnFailureListener(er -> {
-                Toast.makeText(this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "" + er.getMessage(), Toast.LENGTH_LONG).show();
             });
         });
     }
