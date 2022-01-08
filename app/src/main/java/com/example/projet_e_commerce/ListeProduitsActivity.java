@@ -1,17 +1,76 @@
 package com.example.projet_e_commerce;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+
 
 public class ListeProduitsActivity extends AppCompatActivity {
+    FirebaseDatabase db;
+    FirebaseRecyclerAdapter adapter;
+    RecyclerView recyclerView;
+
+    class ProduitVh extends RecyclerView.ViewHolder{
+        TextView mnom;
+        TextView mprix;
+        public ProduitVh(@NonNull View itemView) {
+            super(itemView);
+            mnom = itemView.findViewById(R.id.nom_textview);
+            mprix = itemView.findViewById((R.id.textView2));
+
+
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_produits);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_produits);
+        //recyclerView.findViewById(R.id.recycler_produits);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        db = FirebaseDatabase.getInstance();
+        //CollectionReference ref  = db.getReference("Produit");
+        Query query = db.getReference().child("Produit").orderByChild("nom");
+        FirebaseRecyclerOptions<Produit> options;
+        options = new FirebaseRecyclerOptions.Builder<Produit>().
+        setQuery(query,Produit.class).build();
+
+        adapter = new FirebaseRecyclerAdapter<Produit,ProduitVh>(options) {
+
+            @NonNull
+            @Override
+            public ProduitVh onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_produits,parent,false);
+                return new ProduitVh(layout);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull ProduitVh holder, int position, @NonNull Produit model) {
+                holder.mnom.setText(model.getNom());
+                holder.mprix.setText(model.getPrix());
+
+            }
+        };
+        recyclerView.setAdapter(adapter);
+
+
+
     }
 
 
@@ -26,5 +85,16 @@ public class ListeProduitsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
 
 }
