@@ -62,6 +62,10 @@ public class Produit {
         this.promo = promo;
     }
 
+    public String getProprietaire() {
+        return proprietaire;
+    }
+
     public void setProprietaire(String proprietaire) {
         this.proprietaire = proprietaire;
     }
