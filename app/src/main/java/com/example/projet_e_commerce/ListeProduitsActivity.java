@@ -22,6 +22,8 @@ public class ListeProduitsActivity extends AppCompatActivity {
     FirebaseDatabase db;
     FirebaseRecyclerAdapter adapter;
     RecyclerView recyclerView;
+    public String pseudo_intent;
+
 
     class ProduitVh extends RecyclerView.ViewHolder{
         TextView mnom;
@@ -40,6 +42,15 @@ public class ListeProduitsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_produits);
+
+        // Recuperer les intent: le pseudo de celui connecter
+        Intent intent = getIntent();
+        if (intent != null){
+            if (intent.hasExtra("pseudo_intent")){
+                pseudo_intent = intent.getStringExtra("pseudo_intent");
+            }
+        }
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_produits);
         //recyclerView.findViewById(R.id.recycler_produits);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -82,6 +93,7 @@ public class ListeProduitsActivity extends AppCompatActivity {
 
     public void pageAjoutProduit(View v){
         Intent intent = new Intent(this, AjoutProduitActivity.class);
+        intent.putExtra("pseudo_intent", pseudo_intent);
         startActivity(intent);
     }
 

@@ -4,17 +4,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class AjoutProduitActivity extends AppCompatActivity {
-    ConnexionCommercantActivity com;
+    public String pseudo_intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajout_produit);
+        // Recuperer les intent: le pseudo de celui connecter
+        Intent intent = getIntent();
+        if (intent != null){
+            if (intent.hasExtra("pseudo_intent")){
+                pseudo_intent = intent.getStringExtra("pseudo_intent");
+            }
+        }
 
         Button boutonAjout = findViewById(R.id.buttonAjouterProduit);
         final EditText champCategorie = findViewById(R.id.champCategorieProduit);
@@ -30,7 +38,7 @@ public class AjoutProduitActivity extends AppCompatActivity {
             Produit p = new Produit(champCategorie.getText().toString(),
                     champNom.getText().toString(),
                     champPrix.getText().toString(),
-                    champDescription.getText().toString(),champPromo.getText().toString()//,com.id
+                    champDescription.getText().toString(),champPromo.getText().toString(),pseudo_intent
             );
 
 

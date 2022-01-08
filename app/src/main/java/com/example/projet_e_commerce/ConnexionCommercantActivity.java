@@ -18,10 +18,6 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class ConnexionCommercantActivity extends AppCompatActivity {
-    public String id;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +32,6 @@ public class ConnexionCommercantActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
                 Query applesQuery = ref.child("Commercant").orderByChild("pseudo").equalTo(psd.getText().toString());
 
@@ -47,8 +42,10 @@ public class ConnexionCommercantActivity extends AppCompatActivity {
                             String  mdp = appleSnapshot.child("mdp").getValue().toString();
 
                             if(mdp.equals(password.getText().toString())){
-                                id=psd.getText().toString();
-                                pageCommercant(view);
+                                //pageCommercant(view);
+                                Intent intent = new Intent(ConnexionCommercantActivity.this,CommercantActivity.class);
+                                intent.putExtra("pseudo_intent", psd.getText().toString());
+                                startActivity(intent);
                             }else{
                                // Toast.makeText(this, "identifiant ou mot de passe incorect", Toast.LENGTH_SHORT).show();
 

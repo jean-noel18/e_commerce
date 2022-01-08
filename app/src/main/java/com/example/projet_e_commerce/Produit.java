@@ -7,18 +7,18 @@ public class Produit {
     private String prix;
     private String description;
     private String promo;
-   // private String proprietaire;
+    private String proprietaire;
 
     public Produit() {
     }
 
-    public Produit(String categorie, String nom, String prix, String description, String promo/*, String proprietaire*/) {
+    public Produit(String categorie, String nom, String prix, String description, String promo, String proprietaire) {
         this.categorie = categorie;
         this.nom = nom;
         this.prix = prix;
         this.description = description;
         this.promo = promo;
-        //this.proprietaire = proprietaire;
+        this.proprietaire = proprietaire;
     }
 
 
@@ -62,12 +62,12 @@ public class Produit {
         this.promo = promo;
     }
 
-   /* public String getProprietaire() {
+    public String getProprietaire() {
         return proprietaire;
     }
 
     public void setProprietaire(String proprietaire) {
         this.proprietaire = proprietaire;
-    }*/
+    }
 
 }
