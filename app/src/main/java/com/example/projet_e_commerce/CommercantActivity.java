@@ -18,11 +18,11 @@ public class CommercantActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ConnexionCommercantActivity.class);
         startActivity(intent);
     }
-
     public void pageListeProduits(View v){
         Intent intent = new Intent(this, ListeProduitsActivity.class);
         startActivity(intent);
     }
+
 
     public void pageListeCommande(View v){
         Intent intent = new Intent(this, ListeCommandeActivity.class);

@@ -30,7 +30,7 @@ public class AjoutProduitActivity extends AppCompatActivity {
             Produit p = new Produit(champCategorie.getText().toString(),
                     champNom.getText().toString(),
                     champPrix.getText().toString(),
-                    champDescription.getText().toString(),champPromo.getText().toString(),com.id
+                    champDescription.getText().toString(),champPromo.getText().toString()//,com.id
             );
 
 
@@ -45,7 +45,7 @@ public class AjoutProduitActivity extends AppCompatActivity {
     }
 
     public void retourListeProduit(View v){
-        Intent intent = new Intent(this, ListeProduitsActivity.class);
+        Intent intent = new Intent(this, CommercantActivity.class);
         startActivity(intent);
     }
 }
