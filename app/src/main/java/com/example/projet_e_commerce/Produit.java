@@ -7,16 +7,18 @@ public class Produit {
     private String prix;
     private String description;
     private String promo;
+    private String proprietaire;
 
     public Produit() {
     }
 
-    public Produit(String categorie, String nom, String prix, String description, String promo) {
+    public Produit(String categorie, String nom, String prix, String description, String promo, String proprietaire) {
         this.categorie = categorie;
         this.nom = nom;
         this.prix = prix;
         this.description = description;
         this.promo = promo;
+        this.proprietaire = proprietaire;
     }
 
 
@@ -58,5 +60,9 @@ public class Produit {
 
     public void setPromo(String promo) {
         this.promo = promo;
+    }
+
+    public void setProprietaire(String proprietaire) {
+        this.proprietaire = proprietaire;
     }
 }

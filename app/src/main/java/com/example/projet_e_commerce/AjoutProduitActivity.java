@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class AjoutProduitActivity extends AppCompatActivity {
-
+    ConnexionCommercantActivity com;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class AjoutProduitActivity extends AppCompatActivity {
             Produit p = new Produit(champCategorie.getText().toString(),
                     champNom.getText().toString(),
                     champPrix.getText().toString(),
-                    champDescription.getText().toString(),champPromo.getText().toString()
+                    champDescription.getText().toString(),champPromo.getText().toString(),com.id
             );
 
 

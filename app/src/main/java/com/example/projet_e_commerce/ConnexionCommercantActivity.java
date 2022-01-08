@@ -18,6 +18,8 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class ConnexionCommercantActivity extends AppCompatActivity {
+    public String id;
+
 
 
 
@@ -45,6 +47,7 @@ public class ConnexionCommercantActivity extends AppCompatActivity {
                             String  mdp = appleSnapshot.child("mdp").getValue().toString();
 
                             if(mdp.equals(password.getText().toString())){
+                                id=psd.getText().toString();
                                 pageCommercant(view);
                             }else{
                                // Toast.makeText(this, "identifiant ou mot de passe incorect", Toast.LENGTH_SHORT).show();
