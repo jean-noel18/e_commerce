@@ -49,7 +49,7 @@ public class ListeProduitsActivity extends AppCompatActivity {
         Query query = db.getReference().child("Produit").orderByChild("nom");
         FirebaseRecyclerOptions<Produit> options;
         options = new FirebaseRecyclerOptions.Builder<Produit>().
-        setQuery(query,Produit.class).build();
+                setQuery(query,Produit.class).build();
 
         adapter = new FirebaseRecyclerAdapter<Produit,ProduitVh>(options) {
 
