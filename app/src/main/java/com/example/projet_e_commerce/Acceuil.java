@@ -2,19 +2,24 @@ package com.example.projet_e_commerce;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 public class Acceuil extends AppCompatActivity {
 
@@ -27,6 +32,7 @@ public class Acceuil extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +41,16 @@ public class Acceuil extends AppCompatActivity {
         final EditText champRecherche = findViewById(R.id.champRecherche);
         Button rech = findViewById(R.id.rech);
 
+
+
         rech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-                Query applesQuery = ref.child("Produit").orderByChild("description").equalTo(champRecherche.getText().toString());
-
+                Intent intent = new Intent(Acceuil.this, Liste_produits_client.class);
+                intent.putExtra("champ_recherche",champRecherche.getText().toString());
+                startActivity(intent);
+                /*DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                Query applesQuery = ref.child("Produit").orderByChild("nom").equalTo(champRecherche.getText().toString());
                 applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -66,7 +76,7 @@ public class Acceuil extends AppCompatActivity {
                     }
 
 
-                });
+                });*/
             }
         });
 
