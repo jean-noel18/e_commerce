@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 public class ProduitCommercantActivity extends AppCompatActivity {
     public TextView mnom;
@@ -37,5 +42,12 @@ public class ProduitCommercantActivity extends AppCompatActivity {
                 mdescription.setText("Description: "+intent.getStringExtra("mdescription"));
             }
         }
+    }
+    public void supprimerProduit(View v){
+        /*
+        A faire la methode qui supprime le produit...
+         */
+        Intent intent = new Intent(this, ListeProduitsActivity.class);
+        startActivity(intent);
     }
 }
