@@ -63,7 +63,7 @@ public class ListeProduitsActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         db = FirebaseDatabase.getInstance();
         //CollectionReference ref  = db.getReference("Produit");
-        Query query = db.getReference().child("Produit").orderByChild("nom");
+        Query query = db.getReference().child("Produit").orderByChild("proprietaire").equalTo(pseudo_intent);
         FirebaseRecyclerOptions<Produit> options;
         options = new FirebaseRecyclerOptions.Builder<Produit>().
                 setQuery(query,Produit.class).build();
@@ -89,6 +89,8 @@ public class ListeProduitsActivity extends AppCompatActivity {
                         i.putExtra("mnom",model.getNom());
                         i.putExtra("mprix",model.getPrix());
                         i.putExtra("mdescription",model.getDescription());
+                        i.putExtra("pseudo_intent", pseudo_intent);
+
                         startActivity(i);
                     }
                 });
@@ -105,6 +107,10 @@ public class ListeProduitsActivity extends AppCompatActivity {
 
     public void retourCommercant(View v){
         Intent intent = new Intent(this, CommercantActivity.class);
+        intent.putExtra("pseudo_intent", pseudo_intent);
+
+
+
         startActivity(intent);
     }
 

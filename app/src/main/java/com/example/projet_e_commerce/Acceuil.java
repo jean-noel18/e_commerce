@@ -107,4 +107,9 @@ public class Acceuil extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+
+    public void voirJeux(View v){
+
+    }
 }

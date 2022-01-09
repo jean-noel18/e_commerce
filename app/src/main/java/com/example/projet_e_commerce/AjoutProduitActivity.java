@@ -53,7 +53,9 @@ public class AjoutProduitActivity extends AppCompatActivity {
     }
 
     public void retourListeProduit(View v){
-        Intent intent = new Intent(this, CommercantActivity.class);
+        Intent intent = new Intent(this, ListeProduitsActivity.class);
+        intent.putExtra("pseudo_intent", pseudo_intent);
+
         startActivity(intent);
     }
 }
