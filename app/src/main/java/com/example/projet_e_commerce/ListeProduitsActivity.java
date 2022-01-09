@@ -2,6 +2,8 @@ package com.example.projet_e_commerce;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -28,10 +31,13 @@ public class ListeProduitsActivity extends AppCompatActivity {
     class ProduitVh extends RecyclerView.ViewHolder{
         TextView mnom;
         TextView mprix;
+        //TextView mdescription;
+        public ConstraintLayout produit_item;
         public ProduitVh(@NonNull View itemView) {
             super(itemView);
             mnom = itemView.findViewById(R.id.nom_textview);
             mprix = itemView.findViewById((R.id.textView2));
+            produit_item = (ConstraintLayout) itemView.findViewById((R.id.produit_item));
 
 
         }
@@ -74,7 +80,19 @@ public class ListeProduitsActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull ProduitVh holder, int position, @NonNull Produit model) {
                 holder.mnom.setText(model.getNom());
-                holder.mprix.setText(model.getPrix());
+                holder.mprix.setText(model.getPrix()+"€");
+                //holder.mdescription.setText(model.getDescription());
+                holder.produit_item.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v){
+                        Intent i = new Intent(ListeProduitsActivity.this,ProduitCommercantActivity.class);
+                        i.putExtra("mnom",model.getNom());
+                        i.putExtra("mprix",model.getPrix());
+                        i.putExtra("mdescription",model.getDescription());
+                        startActivity(i);
+                    }
+                });
+
 
             }
         };
